@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   font-weight: bold;
   text-align: center; 
+  background: linear-gradient(0deg, rgba(0,126,128,1) 0%, rgba(167,150,0,1) 100%);
 }
 
 .wrapper > * {
@@ -11,7 +12,7 @@
 }
 
 .header {
-  background: darkolivegreen;
+  background: linear-gradient(90deg, rgba(101,149,0,1) 0%, rgba(7,94,0,1) 50%, rgba(101,149,0,1) 100%);
   height: 45px;
 }
 /*
@@ -52,17 +53,15 @@ navigation inside hea
 
 .main {
   text-align: left;
-  background: white;
-}
 
-.aside-1 {
+}
+/*left side:*/
+.aside-1{
   text-align: center;
-  background: teal;
 }
-
+/*right side*/
 .aside-2 {
   text-align: left;
-  background: teal;
 }
 
 .footer {
@@ -101,37 +100,71 @@ body {
   .aside { flex: 1 0 0; }
 }
 
-//for posts inside main
-
-
-.flex-container {
-  /* We first create a flex layout context */
-  display: flex;
-  
-  /* Then we define the flow direction 
-     and if we allow the items to wrap 
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
- flex-flow: row wrap;
-  
-  /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
-  
+/*on main page this is the post container*/
+.post-container {
+  display: block; /* Switched to block to layout li items vertically */
   padding: 0;
-  margin: 0;
+  margin: 15px;
   list-style: none;
 }
 
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  //width: 200px;
-  height: 150px;
-  margin-top: 5px;
+.post-item {
+  background: #333; /* Darker shade for better readability */
+  padding: 20px; /* Increased padding */
+  margin-top: 15px; /* Adjusted margin */
   color: white;
-  font-weight: bold;
-  font-size: 1em;
-  text-align: left;
+  border-radius: 8px; /* Optional: adds rounded corners to the post */
+}
+
+.profile {
+  display: flex; /* Flex to align image and info side by side */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Space between profile and post content */
+}
+
+.profile-pic {
+  float: left;
+  width: 60px; /* Adjusted width for profile image */
+  height: 60px; /* Adjusted height for profile image */
+  margin-right: 15px; /* Space between image and name */
+  border-radius: 50%; /* Makes the profile picture circular */
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 1.2em; /* Larger font size for the name */
+  color: teal; /* Lighter text color for better readability */
+}
+
+.post-date {
+  font-size: 0.8em; /* Smaller font size for date */
+  color: #bbbbbb; /* Light grey color for the date */
+}
+
+.post-content {
+  font-size: 1em; /* Font size for post content */
+  color: white; /* Text color for post content */
+  margin-bottom: 10px; /* Space between content and actions */
+}
+
+.post-actions {
+  text-align: right; /* Aligns buttons to the right */
+}
+
+button {
+  background: #007bff; /* Example button color */
+  color: white;
+  border: none;
+  padding: 8px 16px; /* Padding inside the button */
+  margin: 0 5px; /* Margin between buttons */
+  border-radius: 10px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+  opacity: 0.8; /* Button feedback on hover */
 }
