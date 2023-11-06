@@ -11,43 +11,13 @@
 }
 
 .header {
-  background: tomato;
+  background: darkolivegreen;
   height: 45px;
 }
+/*
+navigation inside hea
+*/
 
-
-.footer {
-  background: lightgreen;
-}
-
-.main {
-  text-align: left;
-  background: deepskyblue;
-}
-
-.aside-1 {
-  background: green;
-}
-
-.aside-2 {
-  text-align: left;
-  background: hotpink;
-}
-
-
-
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .aside-1 { order: 1; } 
-  .main    { order: 2; }
-  .aside-2 { order: 3; }
-  .footer  { order: 4; }
-}
-
-body {
-   margin: 0; /* Remove default margin */
-  padding: 0; 
-}
 .navigation {
   display: flex;
   flex-flow: row wrap;
@@ -71,13 +41,46 @@ body {
 }
 
 .navigation a:hover {
-  background: #1565C0;
+  background: black;
 }
 
 @media all and (max-width: 800px) {
   .navigation {
     justify-content: space-around;
   }
+}
+
+.main {
+  text-align: left;
+  background: white;
+}
+
+.aside-1 {
+  text-align: center;
+  background: teal;
+}
+
+.aside-2 {
+  text-align: left;
+  background: teal;
+}
+
+.footer {
+  background: lightgreen;
+}
+
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+   margin: 0; /* Remove default margin */
+  padding: 0; 
 }
 
 
@@ -98,7 +101,9 @@ body {
   .aside { flex: 1 0 0; }
 }
 
-//for items inside main
+//for posts inside main
+
+
 .flex-container {
   /* We first create a flex layout context */
   display: flex;
@@ -109,7 +114,7 @@ body {
    * flex-direction: row;
    * flex-wrap: wrap;
    */
-  flex-flow: row wrap;
+ flex-flow: row wrap;
   
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
