@@ -1,14 +1,13 @@
 <div class="wrapper">
   
+  
   <header class="header">
   <ul class="navigation">
-  <li><a href="#">Motaverse</a></li>
+  <li><a href="#">motaverse</a></li>
+  <li><a href="#">My Profile</a></li>
   <li><a href="#">About</a></li>
-  <li><a href="#">Products</a></li>
-  <li><a href="#">Contact</a></li>
+  <li><a href="#">Logout</a></li>
 </ul>
-    
-  
   </header>
 
     <aside class="aside aside-1">
@@ -23,30 +22,48 @@ If needed to add more functionality
     </aside>
   
 <!--
-A way to iterate over the profiles
+find a way to iterate over the posts
 -->
-  <article class="main">
-    <h1> Posts</h1>
-    <ul class="flex-container">
-  <li class="flex-item">Profile 1</li>
-  <li class="flex-item">Profile 2</li>
-  <li class="flex-item">Profile 3</li>
-  <li class="flex-item">Profile 4</li>
-  <li class="flex-item">Profile 5</li>
-  <li class="flex-item">Profile 6</li>
-</ul>
-    
-  </article>
+<article class="main">
+  <h1>Posts</h1>
+  <ul class="post-container">
+    <li class="post-item">
+      <div class="profile">
+        <img src="placeholder-profile.png" alt="Profile Picture" class="profile-pic" />
+        <div class="profile-info">
+          <div class="profile-name">John Doe</div>
+          <div class="post-date">October 31, 2023</div>
+        </div>
+      </div>
+      <div class="post-content">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et euismod libero.
+      </div>
+      <div class="post-actions">
+        <button type="button">Like</button>
+        <button type="button">Comment</button>
+      </div>
+    </li>
+    <!-- More posts... -->
+  </ul>
+</article>
 
   
   <!-- 
-Where the profile would be
+Where all the profiles would be
   -->
   <aside class="aside aside-2">
+    
     <h2>Profiles</h2>
       
-    
     </aside>
-  <footer class="footer">Footer</footer>
+  
+<!--
+Footer
+-->
+  
+  <footer class="footer">
+    Footer
+  </footer>
+  
+  
 </div>
-
